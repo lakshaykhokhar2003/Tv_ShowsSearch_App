@@ -61,7 +61,7 @@ const makeImages = async (links) => {
         button.classList.add("fail");
         const h2 = document.createElement("h2")
         const span = document.createElement("span")
-        h2.innerText = "No Such Shows Found :("
+        h2.innerText = "No Shows Found :("
         span.innerText = "Try Finding Some Other Shows"
         Display.append(h2, span)
         Display.classList.add("NoShows")
