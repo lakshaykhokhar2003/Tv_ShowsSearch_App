@@ -1,0 +1,201 @@
+body {
+    background-color: #030303;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'lato', sans-serif;
+    font-size: 5em;
+    background: linear-gradient(90deg, rgba(10, 44, 154, 1) 18%, rgba(27, 236, 163, 0.8519782913165266) 53%, rgba(27, 235, 236, 0.8519782913165266) 83%);
+    color: transparent;
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 5s linear infinite;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+h2, span {
+    background-image: linear-gradient(to top, #f43b47 40%, #453a94 100%);
+    -webkit-background-clip: text;
+    color: transparent
+}
+
+::placeholder {
+    color: grey;
+}
+
+#Search {
+    background-color: #f0efeb;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    font-size: 45px;
+    border-radius: 5px;
+}
+
+.Loading {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px none red;
+    border-top-style: solid;
+    background-color: inherit;
+    animation: rotate 400ms ease 0.1s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-360deg);
+    }
+}
+
+.SearchButton {
+    color: #00ffff;
+    text-decoration: none;
+    background-color: inherit;
+    font-size: 35px;
+    margin: 0 10px;
+    padding: 7px 15px;
+    border: 3px solid #00ffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease-in-out 100ms;
+}
+
+.SearchButton:active {
+    transform: translateY(10%);
+}
+
+.SearchButtonOnHover {
+    box-shadow: 1px 1px 50px #00ffff;
+    transition: all ease-in-out 100ms;
+}
+
+.fail {
+    color: Red;
+    border: 3px solid Red;
+    box-shadow: 1px 1px 70px #f14668;
+    animation: thing 0.3s infinite;
+    transition: all ease-in-out 100ms;
+}
+
+@keyframes thing {
+    0% {
+        transform: translateX(0%);
+    }
+
+    20% {
+        transform: translateX(-4%);
+    }
+
+    40% {
+        transform: translateX(4%);
+    }
+
+    60% {
+        transform: translateX(-4%);
+    }
+    80% {
+        transform: translateX(4%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.Display {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.DisplayFor_loading {
+    height: 500px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NoShows {
+    width: 80%;
+    height: 500px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Card {
+    height: 300px;
+    width: 210px;
+    margin: 20px 20px;
+    border-radius: 5px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    overflow: hidden;
+    transition: all ease-in-out 200ms;
+}
+
+img {
+    transition: transform ease-in-out 200ms;
+}
+
+.opacity {
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+
+.InvisibleText {
+    width: 100%;
+    opacity: 0;
+    z-index: 1000;
+    color: white;
+    position: absolute;
+    text-align: center;
+    font-size: 1.5em;
+    transition: all ease-in-out 200ms;
+}
+
+.rating {
+    color: orange;
+    z-index: 1000;
+    opacity: 0;
+    font-size: 0.8em;
+    position: absolute;
+    align-self: center;
+    transition: all ease-in-out 200ms;
+}
+
+.visible {
+    opacity: 1;
+    transition: all ease-in-out 200ms;
+}
+
+.Star {
+    position: absolute;
+    bottom: 0;
+    z-index: 1000;
+    transform: translateY(-30px);
+
+}
+
+
+
+
+
