@@ -1,5 +1,5 @@
 body {
-    background-color: #030303;
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,6 +143,7 @@ h2, span {
     margin: 20px 20px;
     border-radius: 5px;
     background-color: black;
+    cursor: Pointer;
     position: relative;
     display: flex;
     justify-content: center;
@@ -153,9 +154,13 @@ h2, span {
 }
 
 img {
+    cursor: pointer;
     transition: transform ease-in-out 200ms;
 }
-
+a{
+    text-decoration: none;
+    color: white;
+}
 .opacity {
     transform: scale(1.2);
     opacity: 0.5;

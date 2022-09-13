@@ -44,9 +44,11 @@ const makeImages = async (links) => {
                 const ImgDiv = document.createElement("div")
                 const details = document.createElement("div")
                 Img.src = link.show.image.medium
-
                 await rating(link, ImgDiv, Card)
-                details.innerText += `${link.show.name} `
+                details.innerText += `${link.show.name}`
+                Card.addEventListener('click', () => {
+                    window.open(`https://www.imdb.com/title/${link.show.externals.imdb}`, '_blank');
+                })
                 details.classList.add("InvisibleText")
                 Card.classList.add("Card")
                 Card.append(details, Img)
