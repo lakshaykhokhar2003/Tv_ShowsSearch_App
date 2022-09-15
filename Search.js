@@ -78,13 +78,13 @@ const rating = (link, ImgDiv, Card) => {
             const Image = document.createElement("img");
             Image.src = `Star.svg`;
             ImgDiv.append(Image)
-            ImgDiv.classList.add("InvisibleText", "Star")
+            ImgDiv.classList.add("InvisibleText", "StarRating")
             Card.append(ImgDiv)
         }
 
     } else {
         ImgDiv.innerText = "Ratings Not Available"
-        ImgDiv.classList.add("rating", "Star")
+        ImgDiv.classList.add("rating", "StarRating")
         Card.append(ImgDiv)
     }
 }
