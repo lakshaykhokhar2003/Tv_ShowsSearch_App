@@ -13,12 +13,13 @@ h1 {
     z-index: 100000000;
     font-family: 'lato', sans-serif;
     font-size: 5em;
-    background: linear-gradient(90deg, rgba(10, 44, 154, 1) 18%, rgba(27, 236, 163, 0.8519782913165266) 53%, rgba(27, 235, 236, 0.8519782913165266) 83%);
+    background: linear-gradient(90deg, rgba(10, 44, 154, 1) 18%, rgba(27, 236, 163, 0.8519782913165266) 53%, rgba(27, 235, 236, 0.8519782913165266) 74%, rgba(27, 52, 236, 0.8519782913165266) 92%, rgba(10, 44, 154, 1) 100%);
     color: transparent;
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textclip 5s linear infinite;
+    animation-direction: alternate-reverse;
 }
 
 @keyframes textclip {
