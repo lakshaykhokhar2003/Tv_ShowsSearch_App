@@ -27,7 +27,9 @@ h1 {
     }
 }
 
-h2, span {
+h2,
+span {
+    align-self: center;
     background: -webkit-linear-gradient(white, #38495a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -43,6 +45,7 @@ form {
 }
 
 #Search {
+    align-self: center;
     background-color: inherit;
     font-family: 'Roboto', sans-serif;
     border: none;
@@ -113,6 +116,7 @@ form {
     60% {
         transform: translateX(-4%);
     }
+
     80% {
         transform: translateX(4%);
     }
@@ -124,12 +128,13 @@ form {
 
 .Display {
     align-self: center;
-    width: 80%;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(5, auto);
     justify-items: center;
     align-items: center;
     flex-direction: column;
+    overflow: auto;
 }
 
 .DisplayFor_loading {
@@ -137,6 +142,7 @@ form {
     height: 500px;
     width: 80%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -146,6 +152,7 @@ form {
     height: 500px;
     font-size: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -161,7 +168,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    object-fit: contain;
+    object-fit: cover;
     overflow: hidden;
     transition: all ease-in-out 200ms;
 }
@@ -196,7 +203,7 @@ a {
     color: orange;
     z-index: 1000;
     opacity: 0;
-    font-size: 0.8em;
+    font-size: 1em;
     position: absolute;
     align-self: center;
     transition: all ease-in-out 200ms;
@@ -297,18 +304,88 @@ a {
     from {
         transform: translateY(0px);
     }
+
     to {
         transform: translateY(-2000px);
     }
 }
 
 @media (min-width: 2400px) {
-    #stars, #stars::after, #stars2, #star2::after, #stars3, #stars3::after {
+
+    #stars,
+    #stars::after,
+    #stars2,
+    #star2::after,
+    #stars3,
+    #stars3::after {
         left: 10%;
         transform: translateX(-50%);
     }
 
-    #stars, #stars::after {
+    #stars,
+    #stars::after {
         top: 0;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    h1 {
+        font-size: 3.5em;
+    }
+
+    #Search {
+        font-size: 20px;
+    }
+
+    .SearchButton {
+        font-size: 20px;
+        margin: 0 3px;
+        padding: 5px 8px;
+        border: 2px solid inherit;
+    }
+
+    .Loading {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    h2,
+    span {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .fail {
+        border: 2px solid red;
+    }
+
+    .Display {
+
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .Card {
+        height: 180px;
+        width: 120px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .InvisibleText {
+        font-size: 1em;
+    }
+
+    .rating {
+        font-size: 0.7em;
+    }
+
+    .StarRating img:nth-child(n) {
+        height: 15px;
+        width: 15px;
     }
 }
