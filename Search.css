@@ -19,7 +19,7 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textclip 5s linear infinite;
-    animation-direction: alternate-reverse;
+    animation-direction: reverse;
 }
 
 @keyframes textclip {
